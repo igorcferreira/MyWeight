@@ -50,7 +50,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                      willContinueUserActivityWithType userActivityType: String) -> Bool
     {
         Log.debug(userActivityType)
-        return true
+        return coordinator?.willContinue(type: userActivityType) ?? false
     }
 
     func application(_ application: UIApplication,
@@ -58,7 +58,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                      restorationHandler: @escaping ([Any]?) -> Void) -> Bool
     {
         Log.debug(userActivity.activityType)
-        return true
+        return coordinator?.continueUserActivity(userActivity) ?? false
     }
-
+    
 }
