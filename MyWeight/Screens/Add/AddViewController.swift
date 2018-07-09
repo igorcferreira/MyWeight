@@ -16,11 +16,13 @@ public class AddViewController: UIViewController {
 
     let massService: MassRepository
     let startMass: Mass
+    let userActivityService: UserActivityProtocol
 
-    public required init(with massService: MassRepository, startMass: Mass)
+    public required init(with massService: MassRepository, startMass: Mass, userActivityService: UserActivityProtocol)
     {
         self.massService = massService
         self.startMass = startMass
+        self.userActivityService = userActivityService
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -44,7 +46,7 @@ public class AddViewController: UIViewController {
         let view = AddView(frame: frame)
         self.view = view
     }
-
+    
     override public func viewWillAppear(_ animated: Bool)
     {
         super.viewDidAppear(animated)
@@ -67,10 +69,10 @@ public class AddViewController: UIViewController {
         massService.save(mass) { (error) in
             Log.debug("Error = \(error.debugDescription)")
         }
-
+        self.userActivity = self.userActivityService.addActivity(with: mass)
         didEnd()
     }
-
+    
     func didEnd() {
         delegate?.didEnd(on: self)
     }

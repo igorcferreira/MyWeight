@@ -13,6 +13,7 @@ public class AppCoordinator {
 
     let navigationController: UINavigationController
     let massService: MassRepository = MassService()
+    let userActivityService: UserActivityProtocol = UserActivityService()
 
     public init(with navigationController: UINavigationController)
     {
@@ -27,6 +28,27 @@ public class AppCoordinator {
         navigationController.pushViewController(controller, animated: true)
     }
 
+    public func willContinue(type: String) -> Bool
+    {
+        return userActivityService.willContinue(type: type)
+    }
+    
+    public func continueUserActivity(_ userActivity: NSUserActivity) -> Bool
+    {
+        guard let activity = userActivityService.parse(userActivity: userActivity) else {
+            return false
+        }
+        
+        switch activity {
+        case .list:
+            return true
+        case .add:
+            let value = userActivityService.extract(userActivity: userActivity)
+            startAdd(last: value)
+            return true
+        }
+    }
+    
     public func extensionRequestedAuthorization() {
         massService.requestAuthorizationForExtension()
     }
@@ -36,7 +58,8 @@ public class AppCoordinator {
     func startAdd(last mass: Mass?)
     {
         let addViewController = AddViewController(with: massService,
-                                                  startMass: mass ?? Mass())
+                                                  startMass: mass ?? Mass(),
+                                                  userActivityService: self.userActivityService)
         addViewController.delegate = self
 
         addViewController.modalPresentationStyle = .custom
