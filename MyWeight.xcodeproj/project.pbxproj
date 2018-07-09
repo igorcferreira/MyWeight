@@ -17,6 +17,8 @@
 		1DA167761DC982EB00E0049C /* AuthorizationRequestViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA167751DC982EB00E0049C /* AuthorizationRequestViewControllerTests.swift */; };
 		1DB0707E1DCE9DCC00367276 /* SnapshotService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB0707D1DCE9DCC00367276 /* SnapshotService.swift */; };
 		6C5AF84A6CE22A5C37EFF724 /* Pods_MyWeightUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6E77B9C5AEA5FFBEDD0EA8C /* Pods_MyWeightUITests.framework */; };
+		AD20FCB020F42427008C6814 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EF68C71D187A5B0010C2E7 /* Localization.swift */; };
+		AD20FCB120F42428008C6814 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EF68C71D187A5B0010C2E7 /* Localization.swift */; };
 		B25889A31D1AF40E00A88EAF /* UITableViewCell+ReuseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25889A21D1AF40E00A88EAF /* UITableViewCell+ReuseIdentifier.swift */; };
 		B25889A61D1AFA1C00A88EAF /* UITableViewExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25889A51D1AFA1C00A88EAF /* UITableViewExtensionsTests.swift */; };
 		B2D4E7B52007C86A00D3E418 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D4E7B42007C86A00D3E418 /* ComplicationController.swift */; };
@@ -1268,6 +1270,7 @@
 				D928C42F1E9AFBFB00BA3065 /* MassPickerItem.swift in Sources */,
 				D92D39211E904EE500D9E9ED /* MassRepository.swift in Sources */,
 				D9D69A751EA3D9B00032B048 /* L10n.swift in Sources */,
+				AD20FCB120F42428008C6814 /* Localization.swift in Sources */,
 				B2D4E7B62007C86A00D3E418 /* ComplicationController.swift in Sources */,
 				D92D39221E904EE500D9E9ED /* Mass.swift in Sources */,
 				D92D393D1E91A90300D9E9ED /* ListInterfaceControllerViewModel.swift in Sources */,
@@ -1289,6 +1292,7 @@
 				D928C42C1E9AF8D100BA3065 /* MassPickerItem.swift in Sources */,
 				D950511B1E7DE44B00519138 /* MassRepository.swift in Sources */,
 				D9D69A741EA3D9B00032B048 /* L10n.swift in Sources */,
+				AD20FCB020F42427008C6814 /* Localization.swift in Sources */,
 				B2D4E7B52007C86A00D3E418 /* ComplicationController.swift in Sources */,
 				D950511D1E7DE46200519138 /* Mass.swift in Sources */,
 				D92D393C1E91A90300D9E9ED /* ListInterfaceControllerViewModel.swift in Sources */,

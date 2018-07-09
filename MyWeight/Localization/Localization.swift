@@ -18,6 +18,10 @@ struct Localization {
         return NSLocalizedString("Add.Title.text", comment: "")
     }
 
+    static var addActivityTile: String {
+        return NSLocalizedString("Add.Activity.Title", comment: "")
+    }
+    
     static var saveButton: String {
         return NSLocalizedString("Add.SaveButton.text", comment: "")
     }

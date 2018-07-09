@@ -6,6 +6,8 @@
 
 "Add.Title.text" = "Nova medida";
 
+"Add.Activity.Title" = "Usuário adicionou uma nova medida";
+
 "List.NoDataDescription.text" = "Adicione sua primeira medida no botão \"Adicionar\"";
 
 "List.NoDataTitle.text" = "Bem Vindo";

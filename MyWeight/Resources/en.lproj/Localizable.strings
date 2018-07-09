@@ -6,6 +6,14 @@
 
 "Add.Title.text" = "New entry";
 
+/*
+ This string is used as a title for the NSUserActivity.
+ The user activity system is used by the Shortcut app,
+ and others like Handoff. And, the title is the information
+ that the user sees when interacting with this system.
+*/
+"Add.Activity.Title" = "User added new entry";
+
 "List.NoDataDescription.text" = "Add your first entry by tapping “Add” below";
 
 "List.NoDataTitle.text" = "Welcome";
