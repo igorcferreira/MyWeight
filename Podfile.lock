@@ -19,6 +19,14 @@ DEPENDENCIES:
   - Quick
   - SwiftGen (~> 5.2)
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - iOSSnapshotTestCase
+    - Nimble
+    - Nimble-Snapshots
+    - Quick
+    - SwiftGen
+
 SPEC CHECKSUMS:
   iOSSnapshotTestCase: 23984ffe05289728d646cbb6a7a10b4fb1c93440
   Nimble: 391f07782af4b37914f9bd7b2ffbb952731b8202
@@ -28,4 +36,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 23b785dfbe58aa03e895983e61c4fce392cb4c84
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.3
