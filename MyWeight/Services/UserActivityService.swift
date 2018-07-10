@@ -43,12 +43,13 @@ public struct UserActivityService: UserActivityProtocol {
          This `isEligibleForPrediction` flag on the userActivity
          donates this activity to the Siri knowledges, allowing
          it to be used by Shortcuts, or Sportlight suggestions.
-         
-         For now, it is wrapped on a #if because it is part of
-         the Beta system.
          */
-        #if __IPHONE_12_0
+        #if os(iOS)
         if #available(iOS 12.0, *) {
+            userActivity.isEligibleForPrediction = true
+        }
+        #elseif os(watchOS)
+        if #available(watchOS 5.0, *) {
             userActivity.isEligibleForPrediction = true
         }
         #endif
